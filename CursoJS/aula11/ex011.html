@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMIGRAÇÃO</title>
+</head>
+<body>
+    <h1>IMIGRAÇÃO</h1>
+    Informe sua Nacionalidade: <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id=res>
+        
+    </div>
+    <script>
+        function verificar() {
+            var pais = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            var nacionalidade = pais.value
+            if (nacionalidade == 'BR' || nacionalidade == 'Brasileiro') {
+                res.innerHTML += `<p>Tu é <strong>Brasileiro</strong> né mano?</p>`
+            } else {
+                res.innerHTML += `<p>Tu é <strong>Estrangeiro</strong> né mano?</p>`
+            }
+        }
+    </script>
+</body>
+</html>
